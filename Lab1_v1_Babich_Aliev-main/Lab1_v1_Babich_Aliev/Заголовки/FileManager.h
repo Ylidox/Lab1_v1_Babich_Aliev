@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -8,13 +9,19 @@ class FileManager
 private:
 	string path;
 public:
+	string getPath();
+
+	void setPath(string path);
+
 	FileManager();
 
 	FileManager(string path);
 
-	void addRecord(string record);
+	void writeToFile(string record);
 
-	string readFile();
+	string* readFromFile();
 
-	string clearString(string s);
+	int length();
 };
+
+
